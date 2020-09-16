@@ -1,0 +1,1 @@
+../../../Whiteboard/Whiteboard/Classes/Room/WhiteSDK+Room.h

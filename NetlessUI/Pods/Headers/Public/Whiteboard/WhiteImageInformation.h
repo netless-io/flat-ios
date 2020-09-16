@@ -1,0 +1,1 @@
+../../../Whiteboard/Whiteboard/Classes/Room/WhiteImageInformation.h
