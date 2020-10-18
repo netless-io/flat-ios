@@ -1,0 +1,9 @@
+platform:ios,'9.0'
+target 'NetlessUI' do
+
+pod 'Masonry'
+pod 'SVProgressHUD'
+pod 'Whiteboard'
+pod 'CWLateralSlide'
+
+end

@@ -1,0 +1,58 @@
+//
+//  PrefixHeader.pch
+//  NetlessUI
+//
+//  Created by tinntay on 2020/9/13.
+//  Copyright © 2020 yize. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Masonry.h>
+#import "NLUtils.h"
+#import "NLBaseViewController.h"
+#import "CheckNull.h"
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define iPhoneX \
+({\
+BOOL iPhoneXSeries = NO;\
+if ([UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPhone) {\
+(iPhoneXSeries);\
+}\
+if (@available(iOS 11.0, *)) {\
+UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];\
+if (mainWindow.safeAreaInsets.bottom > 0.0) {\
+iPhoneXSeries = YES;\
+(iPhoneXSeries);\
+}\
+}\
+(iPhoneXSeries);\
+})
+
+#define isiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#define IsiPhone11 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IsiPhone11Pro ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IsiPhone11ProMax ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define TAB_BAR_BOTTOM_PADDING  (iPhoneX ? (34.f) : 0.f)
+#define TAB_BAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)
+#define NAVIGATION_BAR_HEIGHT (iPhoneX ? 88.f : 64.f)
+#define NAVIGATION_BAR_More (iPhoneX ? 24.f : 10.f)
+
+#define Color(a) [NLUtils UIColorFromHexColor:a]
+
+#define Font(x)  [UIFont systemFontOfSize:x]
+#define BFont(x) [UIFont boldSystemFontOfSize:x]
+
+#define UserName [[NSUserDefaults standardUserDefaults] objectForKey:@"app_userName"]
+#define SetUserName(a) [[NSUserDefaults standardUserDefaults] setObject:a forKey:@"app_userName"]
+
+#define CheckNull(value) [CheckNull checkNull:value]
+
+#endif /* PrefixHeader_pch */
