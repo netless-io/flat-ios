@@ -16,17 +16,18 @@
 
 @implementation WhiteBoardColorSelectView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        self.userInteractionEnabled = YES;
         self.colorsArray =
-        @[@"FC3A3F",@"FD8343",@"FFDA56",@"9FDF76",                                                                  @"60E8C6",@"106BC5",@"4486F6",@"9D27B0",                                                            @"DC74FC",@"939AA8",@"1D2129",@"FFFFFF"];
+        @[@"FC3A3F",@"FD8343",@"FFDA56",@"9FDF76",                                                                  @"60E8C6",@"106BC5",@"4486F6",@"9D27B0",
+                @"DC74FC",@"939AA8",@"1D2129",@"FFFFFF"];
         [self setupUI];
     }
     return self;
 }
+
 
 #pragma mark - setupUI
 - (void)setupUI

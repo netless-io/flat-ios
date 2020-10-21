@@ -19,7 +19,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+                
         self.paperImage = [[UIImageView alloc] init];
         self.paperImage.backgroundColor = [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1];
         self.paperImage.layer.masksToBounds = YES;
@@ -43,6 +43,7 @@
         
         self.deleteButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [self.deleteButton setBackgroundImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
+        [self.deleteButton addTarget:self action:@selector(removeActionIndex:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.deleteButton];
         [self.deleteButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.offset(-16);
@@ -52,6 +53,19 @@
         
     }
     return self;
+}
+
+- (void)setCurrentIndex:(NSInteger)currentIndex
+{
+    _currentIndex = currentIndex;
+    self.deleteButton.tag = currentIndex + 999;
+}
+
+- (void)removeActionIndex:(UIButton *)sender
+{
+    if (self.removeBlock) {
+        self.removeBlock(sender.tag - 999);
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

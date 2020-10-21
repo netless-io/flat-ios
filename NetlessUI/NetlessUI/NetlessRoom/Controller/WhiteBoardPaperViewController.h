@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Whiteboard.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WhiteBoardPaperViewController : UIViewController
 
 @property (nonatomic, strong)UITableView *tableView;
-@property (nonatomic, strong)NSMutableArray *paperArray;
+
+@property (nonatomic, strong) NSMutableArray<WhiteScene *> *pptArray;
+
+@property (nonatomic, copy)void (^removePPTBlock)(NSInteger index);
 
 @end
 

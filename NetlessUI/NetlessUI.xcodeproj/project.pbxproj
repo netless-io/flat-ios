@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F55125B2532313700B94038 /* CustomPopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5512592532313700B94038 /* CustomPopOverView.m */; };
-		7F55126125323C9200B94038 /* CustomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F55126025323C9200B94038 /* CustomPopView.m */; };
 		970965F225109AA000AD1A61 /* NLEditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965F125109AA000AD1A61 /* NLEditNameVC.m */; };
 		970965F525109BA600AD1A61 /* NLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965F425109BA600AD1A61 /* NLBaseViewController.m */; };
 		970965F82510A12900AD1A61 /* NLJoinRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965F72510A12900AD1A61 /* NLJoinRoomViewController.m */; };
@@ -32,7 +31,10 @@
 		9756028925189D1000FEE539 /* WhiteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9756028825189D1000FEE539 /* WhiteUtils.m */; };
 		975BDC002536AE870090055D /* WhiteBoardPaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 975BDBFF2536AE870090055D /* WhiteBoardPaperView.m */; };
 		975BDC032536CE9F0090055D /* ToolsGraphicalSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 975BDC022536CE9F0090055D /* ToolsGraphicalSelectView.m */; };
+		975EF3AE253EDBA700AB6EC9 /* WhiteBoardInviteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 975EF3AD253EDBA700AB6EC9 /* WhiteBoardInviteView.m */; };
+		975EF3B1253EDBC500AB6EC9 /* WhiteBoardFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975EF3B0253EDBC500AB6EC9 /* WhiteBoardFileViewController.m */; };
 		97C75CB1C5B9F88954C8659E /* libPods-NetlessUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18561E8974F29235C5A3A8F7 /* libPods-NetlessUI.a */; };
+		97F5D733253FC65E00D2AED2 /* CircleColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F5D732253FC65E00D2AED2 /* CircleColorButton.m */; };
 		97FA4FE92511E28A005669A0 /* CheckNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FA4FE82511E28A005669A0 /* CheckNull.m */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +59,6 @@
 		18561E8974F29235C5A3A8F7 /* libPods-NetlessUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetlessUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5512592532313700B94038 /* CustomPopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopOverView.m; sourceTree = "<group>"; };
 		7F55125A2532313700B94038 /* CustomPopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopOverView.h; sourceTree = "<group>"; };
-		7F55125F25323C9200B94038 /* CustomPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPopView.h; sourceTree = "<group>"; };
-		7F55126025323C9200B94038 /* CustomPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPopView.m; sourceTree = "<group>"; };
 		7F93CFAC4A098EF5B05BE78A /* Pods-NetlessUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetlessUI.debug.xcconfig"; path = "Target Support Files/Pods-NetlessUI/Pods-NetlessUI.debug.xcconfig"; sourceTree = "<group>"; };
 		970965F025109AA000AD1A61 /* NLEditNameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLEditNameVC.h; sourceTree = "<group>"; };
 		970965F125109AA000AD1A61 /* NLEditNameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLEditNameVC.m; sourceTree = "<group>"; };
@@ -108,6 +108,12 @@
 		975BDBFF2536AE870090055D /* WhiteBoardPaperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteBoardPaperView.m; sourceTree = "<group>"; };
 		975BDC012536CE9F0090055D /* ToolsGraphicalSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsGraphicalSelectView.h; sourceTree = "<group>"; };
 		975BDC022536CE9F0090055D /* ToolsGraphicalSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsGraphicalSelectView.m; sourceTree = "<group>"; };
+		975EF3AC253EDBA700AB6EC9 /* WhiteBoardInviteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhiteBoardInviteView.h; sourceTree = "<group>"; };
+		975EF3AD253EDBA700AB6EC9 /* WhiteBoardInviteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteBoardInviteView.m; sourceTree = "<group>"; };
+		975EF3AF253EDBC500AB6EC9 /* WhiteBoardFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhiteBoardFileViewController.h; sourceTree = "<group>"; };
+		975EF3B0253EDBC500AB6EC9 /* WhiteBoardFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteBoardFileViewController.m; sourceTree = "<group>"; };
+		97F5D731253FC65E00D2AED2 /* CircleColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleColorButton.h; sourceTree = "<group>"; };
+		97F5D732253FC65E00D2AED2 /* CircleColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleColorButton.m; sourceTree = "<group>"; };
 		97FA4FE72511E286005669A0 /* CheckNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckNull.h; sourceTree = "<group>"; };
 		97FA4FE82511E28A005669A0 /* CheckNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckNull.m; sourceTree = "<group>"; };
 		BE279052080155FDD9974B7B /* Pods-NetlessUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetlessUI.release.xcconfig"; path = "Target Support Files/Pods-NetlessUI/Pods-NetlessUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				975066CC251054A600D04EE8 /* Controller */,
-				975066CD251054A600D04EE8 /* Model */,
 				975066CE251054A600D04EE8 /* View */,
 			);
 			path = NetlessRoom;
@@ -220,15 +225,10 @@
 				975066D72510567300D04EE8 /* NetlessRoomViewController.m */,
 				973AE12F2538169900F24917 /* WhiteBoardPaperViewController.h */,
 				973AE1302538169900F24917 /* WhiteBoardPaperViewController.m */,
+				975EF3AF253EDBC500AB6EC9 /* WhiteBoardFileViewController.h */,
+				975EF3B0253EDBC500AB6EC9 /* WhiteBoardFileViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		975066CD251054A600D04EE8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		975066CE251054A600D04EE8 /* View */ = {
@@ -248,8 +248,10 @@
 				7F5512592532313700B94038 /* CustomPopOverView.m */,
 				973AE1322538220000F24917 /* WhiteBoardPaperTableViewCell.h */,
 				973AE1332538220000F24917 /* WhiteBoardPaperTableViewCell.m */,
-				7F55125F25323C9200B94038 /* CustomPopView.h */,
-				7F55126025323C9200B94038 /* CustomPopView.m */,
+				975EF3AC253EDBA700AB6EC9 /* WhiteBoardInviteView.h */,
+				975EF3AD253EDBA700AB6EC9 /* WhiteBoardInviteView.m */,
+				97F5D731253FC65E00D2AED2 /* CircleColorButton.h */,
+				97F5D732253FC65E00D2AED2 /* CircleColorButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -499,11 +501,12 @@
 				975066DC25105E4F00D04EE8 /* UIView+Extension.m in Sources */,
 				975BDC002536AE870090055D /* WhiteBoardPaperView.m in Sources */,
 				970965F525109BA600AD1A61 /* NLBaseViewController.m in Sources */,
+				97F5D733253FC65E00D2AED2 /* CircleColorButton.m in Sources */,
 				975066D82510567300D04EE8 /* NetlessRoomViewController.m in Sources */,
 				970965F82510A12900AD1A61 /* NLJoinRoomViewController.m in Sources */,
 				975602862518826800FEE539 /* WhiteBoardFunctionBar.m in Sources */,
-				7F55126125323C9200B94038 /* CustomPopView.m in Sources */,
 				970965FB2510A14400AD1A61 /* NLCreateRoomViewController.m in Sources */,
+				975EF3B1253EDBC500AB6EC9 /* WhiteBoardFileViewController.m in Sources */,
 				7F55125B2532313700B94038 /* CustomPopOverView.m in Sources */,
 				97506698251053A000D04EE8 /* AppDelegate.m in Sources */,
 				970965F225109AA000AD1A61 /* NLEditNameVC.m in Sources */,
@@ -514,6 +517,7 @@
 				975066A9251053AF00D04EE8 /* main.m in Sources */,
 				975066E225105F2000D04EE8 /* NLUtils.m in Sources */,
 				975BDC032536CE9F0090055D /* ToolsGraphicalSelectView.m in Sources */,
+				975EF3AE253EDBA700AB6EC9 /* WhiteBoardInviteView.m in Sources */,
 				975066D52510564D00D04EE8 /* NetlessLoginViewController.m in Sources */,
 				975066DF25105E8300D04EE8 /* UIColor+PLColor.m in Sources */,
 				97FA4FE92511E28A005669A0 /* CheckNull.m in Sources */,

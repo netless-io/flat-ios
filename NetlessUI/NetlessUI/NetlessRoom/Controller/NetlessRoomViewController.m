@@ -16,14 +16,18 @@
 #import "CustomPopOverView.h"
 #import "WhiteBoardPaperViewController.h"
 #import "UIViewController+CWLateralSlide.h"
+#import "WhiteBoardInviteView.h"
 
-@interface NetlessRoomViewController ()<WhiteCommonCallbackDelegate,functionBarDelegate,toolsBarDelegate>
+@interface NetlessRoomViewController ()<WhiteCommonCallbackDelegate,functionBarDelegate,toolsBarDelegate,UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong)WhiteboardToolsBar *toolsBar;
 @property (nonatomic, strong)WhiteBoardFunctionBar *functionBar;
 
 @property (nonatomic, strong) WhiteBoardView *boardView;
 @property (nonatomic, strong) WhiteSDK *sdk;
+
+@property (nonatomic, strong) NSMutableArray<WhiteScene *> *pptArray;
+
 
 #pragma mark - CallbackDelegate
 @property (nonatomic, weak, nullable) id<WhiteCommonCallbackDelegate> commonDelegate;
@@ -60,6 +64,7 @@
 //    }];
     [WhiteUtils getRoomTokenWithUuid:@"71009d70fd7811ea8a6a89c586a4dabc" completionHandler:^(NSString * _Nullable roomToken, NSError * _Nullable error) {
         [self joinRoomWithToken:roomToken];
+        self.roomToken = roomToken;
     }];
 }
 
@@ -80,14 +85,12 @@
             self.room = room;
             // 获取当前缩放比例
             self.functionBar.scaleLabel.text = [NSString stringWithFormat:@"%.0f%%",self.room.scale*100];
-            // 获取当前画笔颜色
-            NSArray *color = self.room.memberState.strokeColor;
-            if (color.count != 0) {
-                CGFloat R = [color[0] floatValue];
-                CGFloat G = [color[1] floatValue];
-                CGFloat B = [color[2] floatValue];
-                self.functionBar.colorButton.backgroundColor  = [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1];
-            }
+            // 初始化当前画笔颜色
+            WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+            mState.strokeColor = @[@"252",@"58",@"63"];
+            [self.room setMemberState:mState];
+            self.functionBar.colorButton.cyclesColor  = [UIColor colorWithRed:252/255.0 green:58/255.0 blue:63/255.0 alpha:1];
+            [self.functionBar.colorButton setNeedsDisplay];
 
         } else {
             // 错误处理
@@ -162,6 +165,8 @@
             WhiteMemberState *mState = [[WhiteMemberState alloc] init];
             mState.currentApplianceName = ApplianceEraser;
             [self.room setMemberState:mState];
+            // 是否可以擦除图片
+            [self.room disableEraseImage:YES];
             break;
         }
             
@@ -248,16 +253,17 @@
             
         case FunctionType_color:
         {
-            CustomPopOverView *view = [CustomPopOverView popOverView];
-            WhiteBoardColorSelectView *colorView = [[WhiteBoardColorSelectView alloc] init];
-            [view setContent:colorView];
-            [view showFrom:self.functionBar.colorButton alignStyle:CPAlignStyleCenter relativePosition:CPContentPositionAlwaysDown];
-
-            colorView.colorSelectBlock = ^(NSArray * _Nonnull RGBColor) {
-                WhiteMemberState *mState = [[WhiteMemberState alloc] init];
-                mState.strokeColor = RGBColor;
-                [weakSelf.room setMemberState:mState];
-            };
+            [self showColorView];
+//            CustomPopOverView *view = [CustomPopOverView popOverView];
+//            WhiteBoardColorSelectView *colorView = [[WhiteBoardColorSelectView alloc] init];
+//            [view setContent:colorView];
+//            [view showFrom:self.functionBar.colorButton alignStyle:CPAlignStyleCenter relativePosition:CPContentPositionAlwaysDown];
+//
+//            colorView.colorSelectBlock = ^(NSArray * _Nonnull RGBColor) {
+//                WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+//                mState.strokeColor = RGBColor;
+//                [weakSelf.room setMemberState:mState];
+//            };
             break;
         }
             
@@ -270,6 +276,11 @@
         case FunctionType_page:
         {
             WhiteBoardPaperViewController *paperVC = [[WhiteBoardPaperViewController alloc] init];
+            paperVC.pptArray = [NSMutableArray arrayWithArray:self.room.sceneState.scenes];
+            paperVC.removePPTBlock = ^(NSInteger index) {
+                // 删除对应的ppt
+                
+            };
             CWLateralSlideConfiguration *config = [[CWLateralSlideConfiguration alloc] init];
             config.direction = CWDrawerTransitionFromRight;
             config.distance = 240;
@@ -279,21 +290,35 @@
             
         case FunctionType_startPage:
         {
+            [self.room setSceneIndex:0 completionHandler:^(BOOL success, NSError * _Nullable error) {
+                if (success) {
+
+                }
+            }];
             break;
         }
             
         case FunctionType_endPage:
         {
+            // 获取当前场景数，跳转到最后一个
+            NSInteger pptCount = self.room.sceneState.scenes.count;
+            [self.room setSceneIndex:pptCount-1 completionHandler:^(BOOL success, NSError * _Nullable error) {
+                if (success) {
+
+                }
+            }];
             break;
         }
             
         case FunctionType_lastPage:
         {
+            [self.room pptPreviousStep];
             break;
         }
             
         case FunctionType_nextPage:
         {
+            [self.room pptNextStep];
             break;
         }
             
@@ -302,8 +327,9 @@
             break;
         }
             
-        case FunctionType_video:
+        case FunctionType_Follow:
         {
+            [self.room disableCameraTransform:YES];
             break;
         }
             
@@ -314,6 +340,24 @@
             
         case FunctionType_link:
         {
+            
+            UIView *maskView = [[UIView alloc] init];
+            maskView.tag = 101;
+            maskView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+            maskView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.24];
+            UITapGestureRecognizer *tapRecognize = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeInviteView)];
+            [maskView addGestureRecognizer:tapRecognize];
+            
+            UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+            [window addSubview:maskView];
+            
+            WhiteBoardInviteView *inviteView = [[WhiteBoardInviteView alloc] init];
+            inviteView.roomId = self.room.uuid;
+            [maskView addSubview:inviteView];
+            [inviteView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.center.equalTo(self.view);
+                make.size.mas_equalTo(CGSizeMake(400, 219));
+            }];
             break;
         }
             
@@ -325,6 +369,42 @@
         default:
             break;
     }
+}
+
+#pragma mark -
+- (void)showColorView
+{
+    UIView *maskView = [[UIView alloc] init];
+    maskView.tag = 101;
+    maskView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);    
+    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+    [window addSubview:maskView];
+    
+    WhiteBoardColorSelectView *colorView = [[WhiteBoardColorSelectView alloc] init];
+    [maskView addSubview:colorView];
+    [colorView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.functionBar.mas_bottom);
+        make.centerX.equalTo(self.functionBar.colorButton);
+        make.size.mas_equalTo(CGSizeMake(170, 124));
+    }];
+
+    colorView.colorSelectBlock = ^(NSArray * _Nonnull RGBColor) {
+        WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+        mState.strokeColor = RGBColor;
+        [self.room setMemberState:mState];
+        float R = [RGBColor[0] floatValue];
+        float G = [RGBColor[1] floatValue];
+        float B = [RGBColor[2] floatValue];
+        self.functionBar.colorButton.cyclesColor  = [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1];
+        [self.functionBar.colorButton setNeedsDisplay];
+        [self closeInviteView];
+    };
+}
+
+- (void)closeInviteView
+{
+    UIView *maskView = [[[[UIApplication sharedApplication] delegate] window] viewWithTag:101];;
+    [maskView removeFromSuperview];
 }
 
 #pragma mark - 懒加载
@@ -353,6 +433,14 @@
         _boardView = [[WhiteBoardView alloc] init];
     }
     return _boardView;
+}
+
+- (NSMutableArray<WhiteScene *> *)pptArray
+{
+    if (!_pptArray) {
+        _pptArray = [NSMutableArray array];
+    }
+    return _pptArray;
 }
 
 /*

@@ -221,11 +221,11 @@ static float  const buttonHeight = 32;
     }
 }
 
-/** 上传音视频 */
+/** 视角跟随 */
 - (void)videoAction
 {
     if (self.delegate) {
-        [self.delegate functionSelectWithToolsType:FunctionType_video];
+        [self.delegate functionSelectWithToolsType:FunctionType_Follow];
     }
 }
 
@@ -285,10 +285,10 @@ static float  const buttonHeight = 32;
 }
 
 /** 颜色选择 */
-- (UIButton *)colorButton
+- (CircleColorButton *)colorButton
 {
     if (!_colorButton) {
-        _colorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _colorButton = [[CircleColorButton alloc] init];
         [_colorButton addTarget:self action:@selector(colorAction) forControlEvents:UIControlEventTouchUpInside];
 
     }
@@ -389,7 +389,7 @@ static float  const buttonHeight = 32;
     return _currentPageLabel;
 }
 
-/** 上传音视频 */
+/** 视角跟随 */
 - (UIButton *)videoButton
 {
     if (!_videoButton) {

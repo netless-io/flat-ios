@@ -7,26 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CircleColorButton.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 
 typedef NS_ENUM(NSInteger,FunctionType)
 {
-    FunctionType_lastOperation = 1,  // 上一步操作
-    FunctionType_nextOperation,      // 下一步操作
-    FunctionType_color,              // 颜色选中
-    FunctionType_reset,              // 复位
-    FunctionType_page,               // 查看白板
-    FunctionType_startPage,          // 第一页
-    FunctionType_endPage,            // 最后一页
-    FunctionType_lastPage,           // 上一页
-    FunctionType_nextPage,           // 下一页
-    FunctionType_currentPage,        // 当前页
-    FunctionType_video,              // 上传视频
-    FunctionType_file,               // 上传文件
-    FunctionType_link,               // 链接
-    FunctionType_exitRoom,           // 退出房间
+    FunctionType_lastOperation = 1,  /// 上一步操作
+    FunctionType_nextOperation,      /// 下一步操作
+    FunctionType_color,              /// 颜色选中
+    FunctionType_reset,              /// 复位
+    FunctionType_page,               /// 查看白板
+    FunctionType_startPage,          /// 第一页
+    FunctionType_endPage,            /// 最后一页
+    FunctionType_lastPage,           /// 上一页
+    FunctionType_nextPage,           /// 下一页
+    FunctionType_currentPage,        /// 当前页
+    FunctionType_Follow,             /// 视角跟随
+    FunctionType_file,               /// 上传文件
+    FunctionType_link,               /// 链接
+    FunctionType_exitRoom,           /// 退出房间
 };
 
 @protocol functionBarDelegate <NSObject>
@@ -52,7 +53,7 @@ typedef NS_ENUM(NSInteger,FunctionType)
 @property (nonatomic, strong)UIButton *nextOperationButton;
 
 /** 颜色选择 */
-@property (nonatomic, strong)UIButton *colorButton;
+@property (nonatomic, strong)CircleColorButton *colorButton;
 
 /** 定位到当前位置 */
 @property (nonatomic, strong)UIButton *resetButton;

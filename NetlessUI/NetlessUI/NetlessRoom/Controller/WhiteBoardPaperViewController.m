@@ -44,25 +44,40 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.pptArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    __weak typeof(self) weakSelf = self;
     WhiteBoardPaperTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WhiteBoardPaperTableViewCell" forIndexPath:indexPath];
+    cell.currentIndex = indexPath.row;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.indexLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row + 1];
+    cell.removeBlock = ^(NSInteger index) {
+        [weakSelf removePPTActionAtIndex:index];
+    };
     return cell;
 }
 
-#pragma mark - 懒加载
-- (NSMutableArray *)paperArray
+- (void)removePPTActionAtIndex:(NSInteger)index
 {
-    if (!_paperArray) {
-        _paperArray = [[NSMutableArray alloc] init];
+    [self.pptArray removeObjectAtIndex:index];
+    [self.tableView reloadData];
+    if (self.removePPTBlock) {
+        self.removePPTBlock(index);
     }
-    return _paperArray;
 }
+
+#pragma mark - 懒加载
+- (NSMutableArray<WhiteScene *> *)pptArray
+{
+    if (!_pptArray) {
+        _pptArray = [[NSMutableArray alloc] init];
+    }
+    return _pptArray;
+}
+
 
 - (UITableView *)tableView
 {

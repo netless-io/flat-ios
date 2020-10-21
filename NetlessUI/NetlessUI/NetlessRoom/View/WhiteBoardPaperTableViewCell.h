@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)UILabel *indexLabel;
 @property (nonatomic, strong)UIButton *deleteButton;
 
+@property (nonatomic, assign)NSInteger currentIndex;
+
+@property (nonatomic, copy)void (^removeBlock)(NSInteger index);
+
+
 @end
 
 NS_ASSUME_NONNULL_END
