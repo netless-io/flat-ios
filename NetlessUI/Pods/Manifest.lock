@@ -1,0 +1,53 @@
+PODS:
+  - CWLateralSlide (1.6.5)
+  - dsBridge (3.0.6)
+  - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
+  - Whiteboard (2.9.16):
+    - Whiteboard/Base (= 2.9.16)
+    - Whiteboard/Converter (= 2.9.16)
+    - Whiteboard/NativeReplayer (= 2.9.16)
+    - Whiteboard/Object (= 2.9.16)
+    - Whiteboard/Replayer (= 2.9.16)
+    - Whiteboard/Room (= 2.9.16)
+  - Whiteboard/Base (2.9.16):
+    - dsBridge (~> 3.0.2)
+    - Whiteboard/Object
+  - Whiteboard/Converter (2.9.16):
+    - Whiteboard/Object
+  - Whiteboard/NativeReplayer (2.9.16):
+    - Whiteboard/Replayer
+  - Whiteboard/Object (2.9.16):
+    - YYModel (~> 1.0.4)
+  - Whiteboard/Replayer (2.9.16):
+    - Whiteboard/Base
+  - Whiteboard/Room (2.9.16):
+    - Whiteboard/Base
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - CWLateralSlide
+  - Masonry
+  - SVProgressHUD
+  - Whiteboard
+
+SPEC REPOS:
+  trunk:
+    - CWLateralSlide
+    - dsBridge
+    - Masonry
+    - SVProgressHUD
+    - Whiteboard
+    - YYModel
+
+SPEC CHECKSUMS:
+  CWLateralSlide: 8939c8dea91a24e40d0793553118cb57cd67f64b
+  dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Whiteboard: ebda0a7de42213069b611743821e34930f060954
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: a33d2a99d579f7dc54278bab445d9d31e41df162
+
+COCOAPODS: 1.9.3
