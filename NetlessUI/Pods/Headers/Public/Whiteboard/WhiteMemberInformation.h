@@ -1,0 +1,1 @@
+../../../Whiteboard/Whiteboard/Classes/Object/WhiteMemberInformation.h

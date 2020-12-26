@@ -1,0 +1,57 @@
+PODS:
+  - dsBridge (3.0.6)
+  - Masonry (1.1.0)
+  - MJExtension (3.2.2)
+  - MJRefresh (3.4.3)
+  - SVProgressHUD (2.2.5)
+  - Whiteboard (2.9.16):
+    - Whiteboard/Base (= 2.9.16)
+    - Whiteboard/Converter (= 2.9.16)
+    - Whiteboard/NativeReplayer (= 2.9.16)
+    - Whiteboard/Object (= 2.9.16)
+    - Whiteboard/Replayer (= 2.9.16)
+    - Whiteboard/Room (= 2.9.16)
+  - Whiteboard/Base (2.9.16):
+    - dsBridge (~> 3.0.2)
+    - Whiteboard/Object
+  - Whiteboard/Converter (2.9.16):
+    - Whiteboard/Object
+  - Whiteboard/NativeReplayer (2.9.16):
+    - Whiteboard/Replayer
+  - Whiteboard/Object (2.9.16):
+    - YYModel (~> 1.0.4)
+  - Whiteboard/Replayer (2.9.16):
+    - Whiteboard/Base
+  - Whiteboard/Room (2.9.16):
+    - Whiteboard/Base
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Masonry
+  - MJExtension
+  - MJRefresh
+  - SVProgressHUD
+  - Whiteboard
+
+SPEC REPOS:
+  trunk:
+    - dsBridge
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - SVProgressHUD
+    - Whiteboard
+    - YYModel
+
+SPEC CHECKSUMS:
+  dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Whiteboard: ebda0a7de42213069b611743821e34930f060954
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: b35ecebf9b7815dff3d1bd6820fe8062a545c73f
+
+COCOAPODS: 1.9.3

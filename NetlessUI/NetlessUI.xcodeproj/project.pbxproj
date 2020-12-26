@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		970965F225109AA000AD1A61 /* NLEditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965F125109AA000AD1A61 /* NLEditNameVC.m */; };
+		970965F525109BA600AD1A61 /* NLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965F425109BA600AD1A61 /* NLBaseViewController.m */; };
+		970965F82510A12900AD1A61 /* NLJoinRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965F72510A12900AD1A61 /* NLJoinRoomViewController.m */; };
+		970965FB2510A14400AD1A61 /* NLCreateRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970965FA2510A14400AD1A61 /* NLCreateRoomViewController.m */; };
+		97506698251053A000D04EE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97506697251053A000D04EE8 /* AppDelegate.m */; };
+		975066A3251053AF00D04EE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975066A2251053AF00D04EE8 /* Assets.xcassets */; };
+		975066A6251053AF00D04EE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975066A4251053AF00D04EE8 /* LaunchScreen.storyboard */; };
+		975066A9251053AF00D04EE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066A8251053AF00D04EE8 /* main.m */; };
+		975066B3251053B100D04EE8 /* NetlessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066B2251053B100D04EE8 /* NetlessUITests.m */; };
+		975066BE251053B100D04EE8 /* NetlessUIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066BD251053B100D04EE8 /* NetlessUIUITests.m */; };
+		975066D52510564D00D04EE8 /* NetlessLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066D42510564D00D04EE8 /* NetlessLoginViewController.m */; };
+		975066D82510567300D04EE8 /* NetlessRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066D72510567300D04EE8 /* NetlessRoomViewController.m */; };
+		975066DC25105E4F00D04EE8 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066DA25105E4E00D04EE8 /* UIView+Extension.m */; };
+		975066DF25105E8300D04EE8 /* UIColor+PLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066DE25105E8300D04EE8 /* UIColor+PLColor.m */; };
+		975066E225105F2000D04EE8 /* NLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 975066E125105F2000D04EE8 /* NLUtils.m */; };
+		97C75CB1C5B9F88954C8659E /* libPods-NetlessUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18561E8974F29235C5A3A8F7 /* libPods-NetlessUI.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		975066AF251053B100D04EE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9750668B251053A000D04EE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97506692251053A000D04EE8;
+			remoteInfo = NetlessUI;
+		};
+		975066BA251053B100D04EE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9750668B251053A000D04EE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97506692251053A000D04EE8;
+			remoteInfo = NetlessUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18561E8974F29235C5A3A8F7 /* libPods-NetlessUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetlessUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F93CFAC4A098EF5B05BE78A /* Pods-NetlessUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetlessUI.debug.xcconfig"; path = "Target Support Files/Pods-NetlessUI/Pods-NetlessUI.debug.xcconfig"; sourceTree = "<group>"; };
+		970965F025109AA000AD1A61 /* NLEditNameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLEditNameVC.h; sourceTree = "<group>"; };
+		970965F125109AA000AD1A61 /* NLEditNameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLEditNameVC.m; sourceTree = "<group>"; };
+		970965F325109BA600AD1A61 /* NLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLBaseViewController.h; sourceTree = "<group>"; };
+		970965F425109BA600AD1A61 /* NLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLBaseViewController.m; sourceTree = "<group>"; };
+		970965F62510A12900AD1A61 /* NLJoinRoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLJoinRoomViewController.h; sourceTree = "<group>"; };
+		970965F72510A12900AD1A61 /* NLJoinRoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLJoinRoomViewController.m; sourceTree = "<group>"; };
+		970965F92510A14400AD1A61 /* NLCreateRoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLCreateRoomViewController.h; sourceTree = "<group>"; };
+		970965FA2510A14400AD1A61 /* NLCreateRoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLCreateRoomViewController.m; sourceTree = "<group>"; };
+		97506693251053A000D04EE8 /* NetlessUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetlessUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97506696251053A000D04EE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97506697251053A000D04EE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		975066A2251053AF00D04EE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		975066A5251053AF00D04EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		975066A7251053AF00D04EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		975066A8251053AF00D04EE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		975066AE251053B000D04EE8 /* NetlessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetlessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		975066B2251053B100D04EE8 /* NetlessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetlessUITests.m; sourceTree = "<group>"; };
+		975066B4251053B100D04EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		975066B9251053B100D04EE8 /* NetlessUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetlessUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		975066BD251053B100D04EE8 /* NetlessUIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetlessUIUITests.m; sourceTree = "<group>"; };
+		975066BF251053B100D04EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		975066D32510564D00D04EE8 /* NetlessLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetlessLoginViewController.h; sourceTree = "<group>"; };
+		975066D42510564D00D04EE8 /* NetlessLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetlessLoginViewController.m; sourceTree = "<group>"; };
+		975066D62510567300D04EE8 /* NetlessRoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetlessRoomViewController.h; sourceTree = "<group>"; };
+		975066D72510567300D04EE8 /* NetlessRoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetlessRoomViewController.m; sourceTree = "<group>"; };
+		975066D92510572200D04EE8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = NetlessUI/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		975066DA25105E4E00D04EE8 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		975066DB25105E4F00D04EE8 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		975066DD25105E8100D04EE8 /* UIColor+PLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PLColor.h"; sourceTree = "<group>"; };
+		975066DE25105E8300D04EE8 /* UIColor+PLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PLColor.m"; sourceTree = "<group>"; };
+		975066E025105F2000D04EE8 /* NLUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLUtils.h; sourceTree = "<group>"; };
+		975066E125105F2000D04EE8 /* NLUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLUtils.m; sourceTree = "<group>"; };
+		BE279052080155FDD9974B7B /* Pods-NetlessUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetlessUI.release.xcconfig"; path = "Target Support Files/Pods-NetlessUI/Pods-NetlessUI.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97506690251053A000D04EE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C75CB1C5B9F88954C8659E /* libPods-NetlessUI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975066AB251053B000D04EE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975066B6251053B100D04EE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24EBCE1B87753C85596AF769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18561E8974F29235C5A3A8F7 /* libPods-NetlessUI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9750668A251053A000D04EE8 = {
+			isa = PBXGroup;
+			children = (
+				97506695251053A000D04EE8 /* NetlessUI */,
+				975066B1251053B100D04EE8 /* NetlessUITests */,
+				975066BC251053B100D04EE8 /* NetlessUIUITests */,
+				97506694251053A000D04EE8 /* Products */,
+				E48FEBC630A49817A990647D /* Pods */,
+				24EBCE1B87753C85596AF769 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		97506694251053A000D04EE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97506693251053A000D04EE8 /* NetlessUI.app */,
+				975066AE251053B000D04EE8 /* NetlessUITests.xctest */,
+				975066B9251053B100D04EE8 /* NetlessUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97506695251053A000D04EE8 /* NetlessUI */ = {
+			isa = PBXGroup;
+			children = (
+				975066D0251054BC00D04EE8 /* Common */,
+				975066CF251054B300D04EE8 /* Login */,
+				975066CB251054A500D04EE8 /* NetlessRoom */,
+				97506696251053A000D04EE8 /* AppDelegate.h */,
+				97506697251053A000D04EE8 /* AppDelegate.m */,
+				975066A2251053AF00D04EE8 /* Assets.xcassets */,
+				975066A4251053AF00D04EE8 /* LaunchScreen.storyboard */,
+				975066A7251053AF00D04EE8 /* Info.plist */,
+				975066A8251053AF00D04EE8 /* main.m */,
+			);
+			path = NetlessUI;
+			sourceTree = "<group>";
+		};
+		975066B1251053B100D04EE8 /* NetlessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				975066B2251053B100D04EE8 /* NetlessUITests.m */,
+				975066B4251053B100D04EE8 /* Info.plist */,
+			);
+			path = NetlessUITests;
+			sourceTree = "<group>";
+		};
+		975066BC251053B100D04EE8 /* NetlessUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				975066BD251053B100D04EE8 /* NetlessUIUITests.m */,
+				975066BF251053B100D04EE8 /* Info.plist */,
+			);
+			path = NetlessUIUITests;
+			sourceTree = "<group>";
+		};
+		975066CB251054A500D04EE8 /* NetlessRoom */ = {
+			isa = PBXGroup;
+			children = (
+				975066CC251054A600D04EE8 /* Controller */,
+				975066CD251054A600D04EE8 /* Model */,
+				975066CE251054A600D04EE8 /* View */,
+			);
+			path = NetlessRoom;
+			sourceTree = "<group>";
+		};
+		975066CC251054A600D04EE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				975066D62510567300D04EE8 /* NetlessRoomViewController.h */,
+				975066D72510567300D04EE8 /* NetlessRoomViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		975066CD251054A600D04EE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		975066CE251054A600D04EE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		975066CF251054B300D04EE8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				975066D32510564D00D04EE8 /* NetlessLoginViewController.h */,
+				975066D42510564D00D04EE8 /* NetlessLoginViewController.m */,
+				970965F025109AA000AD1A61 /* NLEditNameVC.h */,
+				970965F125109AA000AD1A61 /* NLEditNameVC.m */,
+				970965F62510A12900AD1A61 /* NLJoinRoomViewController.h */,
+				970965F72510A12900AD1A61 /* NLJoinRoomViewController.m */,
+				970965F92510A14400AD1A61 /* NLCreateRoomViewController.h */,
+				970965FA2510A14400AD1A61 /* NLCreateRoomViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		975066D0251054BC00D04EE8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				975066E32510891C00D04EE8 /* Tools */,
+				975066D1251054BC00D04EE8 /* Category */,
+				975066D2251054BC00D04EE8 /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		975066D1251054BC00D04EE8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				975066DB25105E4F00D04EE8 /* UIView+Extension.h */,
+				975066DA25105E4E00D04EE8 /* UIView+Extension.m */,
+				975066DD25105E8100D04EE8 /* UIColor+PLColor.h */,
+				975066DE25105E8300D04EE8 /* UIColor+PLColor.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		975066D2251054BC00D04EE8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				975066D92510572200D04EE8 /* PrefixHeader.pch */,
+				975066E025105F2000D04EE8 /* NLUtils.h */,
+				975066E125105F2000D04EE8 /* NLUtils.m */,
+				970965F325109BA600AD1A61 /* NLBaseViewController.h */,
+				970965F425109BA600AD1A61 /* NLBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		975066E32510891C00D04EE8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E48FEBC630A49817A990647D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F93CFAC4A098EF5B05BE78A /* Pods-NetlessUI.debug.xcconfig */,
+				BE279052080155FDD9974B7B /* Pods-NetlessUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97506692251053A000D04EE8 /* NetlessUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 975066C2251053B100D04EE8 /* Build configuration list for PBXNativeTarget "NetlessUI" */;
+			buildPhases = (
+				5FA356F1FA04BCBE3F764AED /* [CP] Check Pods Manifest.lock */,
+				9750668F251053A000D04EE8 /* Sources */,
+				97506690251053A000D04EE8 /* Frameworks */,
+				97506691251053A000D04EE8 /* Resources */,
+				DAF1996A05346CE262FA9F69 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetlessUI;
+			productName = NetlessUI;
+			productReference = 97506693251053A000D04EE8 /* NetlessUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		975066AD251053B000D04EE8 /* NetlessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 975066C5251053B100D04EE8 /* Build configuration list for PBXNativeTarget "NetlessUITests" */;
+			buildPhases = (
+				975066AA251053B000D04EE8 /* Sources */,
+				975066AB251053B000D04EE8 /* Frameworks */,
+				975066AC251053B000D04EE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				975066B0251053B100D04EE8 /* PBXTargetDependency */,
+			);
+			name = NetlessUITests;
+			productName = NetlessUITests;
+			productReference = 975066AE251053B000D04EE8 /* NetlessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		975066B8251053B100D04EE8 /* NetlessUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 975066C8251053B100D04EE8 /* Build configuration list for PBXNativeTarget "NetlessUIUITests" */;
+			buildPhases = (
+				975066B5251053B100D04EE8 /* Sources */,
+				975066B6251053B100D04EE8 /* Frameworks */,
+				975066B7251053B100D04EE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				975066BB251053B100D04EE8 /* PBXTargetDependency */,
+			);
+			name = NetlessUIUITests;
+			productName = NetlessUIUITests;
+			productReference = 975066B9251053B100D04EE8 /* NetlessUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9750668B251053A000D04EE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = yize;
+				TargetAttributes = {
+					97506692251053A000D04EE8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					975066AD251053B000D04EE8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 97506692251053A000D04EE8;
+					};
+					975066B8251053B100D04EE8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 97506692251053A000D04EE8;
+					};
+				};
+			};
+			buildConfigurationList = 9750668E251053A000D04EE8 /* Build configuration list for PBXProject "NetlessUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9750668A251053A000D04EE8;
+			productRefGroup = 97506694251053A000D04EE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97506692251053A000D04EE8 /* NetlessUI */,
+				975066AD251053B000D04EE8 /* NetlessUITests */,
+				975066B8251053B100D04EE8 /* NetlessUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97506691251053A000D04EE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975066A6251053AF00D04EE8 /* LaunchScreen.storyboard in Resources */,
+				975066A3251053AF00D04EE8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975066AC251053B000D04EE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975066B7251053B100D04EE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FA356F1FA04BCBE3F764AED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetlessUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF1996A05346CE262FA9F69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetlessUI/Pods-NetlessUI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetlessUI/Pods-NetlessUI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetlessUI/Pods-NetlessUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9750668F251053A000D04EE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975066DC25105E4F00D04EE8 /* UIView+Extension.m in Sources */,
+				970965F525109BA600AD1A61 /* NLBaseViewController.m in Sources */,
+				975066D82510567300D04EE8 /* NetlessRoomViewController.m in Sources */,
+				970965F82510A12900AD1A61 /* NLJoinRoomViewController.m in Sources */,
+				970965FB2510A14400AD1A61 /* NLCreateRoomViewController.m in Sources */,
+				97506698251053A000D04EE8 /* AppDelegate.m in Sources */,
+				970965F225109AA000AD1A61 /* NLEditNameVC.m in Sources */,
+				975066A9251053AF00D04EE8 /* main.m in Sources */,
+				975066E225105F2000D04EE8 /* NLUtils.m in Sources */,
+				975066D52510564D00D04EE8 /* NetlessLoginViewController.m in Sources */,
+				975066DF25105E8300D04EE8 /* UIColor+PLColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975066AA251053B000D04EE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975066B3251053B100D04EE8 /* NetlessUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975066B5251053B100D04EE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975066BE251053B100D04EE8 /* NetlessUIUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		975066B0251053B100D04EE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97506692251053A000D04EE8 /* NetlessUI */;
+			targetProxy = 975066AF251053B100D04EE8 /* PBXContainerItemProxy */;
+		};
+		975066BB251053B100D04EE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97506692251053A000D04EE8 /* NetlessUI */;
+			targetProxy = 975066BA251053B100D04EE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		975066A4251053AF00D04EE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				975066A5251053AF00D04EE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		975066C0251053B100D04EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		975066C1251053B100D04EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		975066C3251053B100D04EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F93CFAC4A098EF5B05BE78A /* Pods-NetlessUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X33PB86UA5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NetlessUI/PrefixHeader.pch";
+				INFOPLIST_FILE = NetlessUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yz.NetlessUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		975066C4251053B100D04EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE279052080155FDD9974B7B /* Pods-NetlessUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X33PB86UA5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NetlessUI/PrefixHeader.pch";
+				INFOPLIST_FILE = NetlessUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yz.NetlessUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		975066C6251053B100D04EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X33PB86UA5;
+				INFOPLIST_FILE = NetlessUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yz.NetlessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetlessUI.app/NetlessUI";
+			};
+			name = Debug;
+		};
+		975066C7251053B100D04EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X33PB86UA5;
+				INFOPLIST_FILE = NetlessUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yz.NetlessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetlessUI.app/NetlessUI";
+			};
+			name = Release;
+		};
+		975066C9251053B100D04EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X33PB86UA5;
+				INFOPLIST_FILE = NetlessUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yz.NetlessUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetlessUI;
+			};
+			name = Debug;
+		};
+		975066CA251053B100D04EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X33PB86UA5;
+				INFOPLIST_FILE = NetlessUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yz.NetlessUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetlessUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9750668E251053A000D04EE8 /* Build configuration list for PBXProject "NetlessUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975066C0251053B100D04EE8 /* Debug */,
+				975066C1251053B100D04EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		975066C2251053B100D04EE8 /* Build configuration list for PBXNativeTarget "NetlessUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975066C3251053B100D04EE8 /* Debug */,
+				975066C4251053B100D04EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		975066C5251053B100D04EE8 /* Build configuration list for PBXNativeTarget "NetlessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975066C6251053B100D04EE8 /* Debug */,
+				975066C7251053B100D04EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		975066C8251053B100D04EE8 /* Build configuration list for PBXNativeTarget "NetlessUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975066C9251053B100D04EE8 /* Debug */,
+				975066CA251053B100D04EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9750668B251053A000D04EE8 /* Project object */;
+}
